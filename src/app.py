@@ -1,18 +1,25 @@
 #importing the libraries;
+# from fastapi import FastAPI
+# from os, uvicorn
+# from typing import List, Literal
+# from pydantic import BaseModel
+# import joblib
+# from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI
-from os, uvicorn
+from uvicorn import run as uvicorn_run
 from typing import List, Literal
 from pydantic import BaseModel
 import joblib
 from fastapi.encoders import jsonable_encoder
+
 
 #CONFIG
 app = FastAPI(
     title="Income Prediction API",
     version="0.0.1"
     description="This is a simple API for Income prediction",
-    docs_url="/",
-    redoc_url=None"
+    # docs_url="/",
+    # redoc_url=None"
 )
 
 #API INPUT
