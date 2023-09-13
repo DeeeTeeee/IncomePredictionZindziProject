@@ -95,10 +95,10 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
 
  
     with gr.Row():
-        gr.Markdown("This application provides predictions on whether a customer will churn or remain with the Company. Please enter the customer's information below and click PREDICT to view the prediction outcome.")
+        gr.Markdown("This application provides predictions on whether a person earns above or below the income level. Please enter the person's information below and click PREDICT to view the prediction outcome.")
 
     with gr.Row():
-        with gr.Column(scale=3.5, min_width=500):
+        with gr.Column(scale=4, min_width=500):
             input_interface = [
                 gr.components.Number(label="How Old are you?")
                 gr.components.Radio(['male', 'female'], label='What is your Gender?'),
@@ -125,8 +125,9 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
                                          ' Native- Born abroad of American Parent(s)',
                                          ' Native- Born in U S',' Native- Born in Puerto Rico or U S Outlying'], label='Whats is your Citizenshiip?'),
                 gr.components.Radio([94,95], label='Whats your year of migration?')
-                gr.components.Number(label='Whats your Weight Of Instance?')           
-                ]
+                gr.components.Number(label='Whats your Weight Of Instance?')    
+                       
+            ]
 
     with gr.Row():
         predict_btn = gr.Button('Predict') 
