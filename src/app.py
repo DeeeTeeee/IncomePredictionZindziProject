@@ -7,8 +7,6 @@ import joblib
 from PIL import Image
 
 #using joblib to load the model:
-# num_imputer = joblib.load('num_imputer.joblib') # loading the imputer 
-# cat_imputer = joblib.load('cat_imputer.joblib') # loading the imputer
 encoder = joblib.load('encoder.joblib') # loading the encoder
 scaler = joblib.load('scaler.joblib') # loading the scaler
 model = joblib.load('ml.joblib') # loading the model
@@ -64,14 +62,6 @@ def predict(age,gender,education,marital_status,race,employment_stat,wage_per_ho
     #joining the cat encoded and num scaled
      final_df = pd.concat([input_encoded_df, input_scaled_df], axis=1)
 
-    #  final_df = final_df.reindex(columns=['SeniorCitizen','tenure','MonthlyCharges','TotalCharges',
-    #  'gender_Female','gender_Male','Partner_No','Partner_Yes','Dependents_No','Dependents_Yes','PhoneService_No',
-    #  'PhoneService_Yes','MultipleLines_No','MultipleLines_Yes','InternetService_DSL','InternetService_Fiber optic',
-    #  'InternetService_No','OnlineSecurity_No','OnlineSecurity_Yes','OnlineBackup_No','OnlineBackup_Yes','DeviceProtection_No',
-    #  'DeviceProtection_Yes','TechSupport_No','TechSupport_Yes','StreamingTV_No','StreamingTV_Yes','StreamingMovies_No',
-    #  'StreamingMovies_Yes','Contract_Month-to-month','Contract_One year','Contract_Two year','PaperlessBilling_No',
-    #  'PaperlessBilling_Yes','PaymentMethod_Bank transfer (automatic)','PaymentMethod_Credit card (automatic)','PaymentMethod_Electronic check',
-    #  'PaymentMethod_Mailed check'])
 
     # Make predictions using the model
      predict = model.predict(final_df)
@@ -85,7 +75,6 @@ def predict(age,gender,education,marital_status,race,employment_stat,wage_per_ho
      #return predictions
 
 #define the input interface
-
 
 input_interface = []
 
@@ -140,4 +129,4 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
     predict_btn.click(fn=predict, inputs=input_interface, outputs=output_interface)
 
 
-    app.launch(share=True)
+    app.launch(share=False)
