@@ -100,7 +100,7 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
     with gr.Row():
         with gr.Column(scale=4, min_width=500):
             input_interface = [
-                gr.components.Number(label="How Old are you?")
+                gr.components.Number(label="How Old are you?"),
                 gr.components.Radio(['male', 'female'], label='What is your Gender?'),
                 gr.components.Dropdown(['High School', 'left', 'Undergrad', 'Grad', 'Associate Degree',
                                          'Doctorate'], label='What is your level of education?'),
@@ -113,10 +113,10 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
                 gr.components.Number(label='How many working weeks per year do you work?'),
                 gr.components.Number(label='What is your Industry Code? (1 - 51)'),
                 gr.components.Number(label='What is your occupation Code? (1 - 46)'),
-                gr.components.Number(label='Number of persons working for employer? (1 - 7)')
-                gr.components.Number(label='Benefit? (1 - 3)') 
+                gr.components.Number(label='Number of persons working for employer? (1 - 7)'),
+                gr.components.Number(label='Benefit? (1 - 3)'),
                 gr.components.Dropdown([' Head of household', ' Single', ' Nonfiler', ' Joint both 65+',
-                                        ' Joint one 65+ & one under 65', ' Joint one under 65 & one 65+'],label='Whats your tax status?')
+                                        ' Joint one 65+ & one under 65', ' Joint one under 65 & one 65+'],label='Whats your tax status?'),
                 gr.components.Number(label='What is your Gain'), 
                 gr.components.Number(label='What is your Loss'),
                 gr.components.Number(label='What is your Stock Status'),
@@ -124,7 +124,7 @@ with gr.Blocks(css=".gradio-container {background-color:silver}") as app:
                                          ' Foreign born- U S citizen by naturalization',
                                          ' Native- Born abroad of American Parent(s)',
                                          ' Native- Born in U S',' Native- Born in Puerto Rico or U S Outlying'], label='Whats is your Citizenshiip?'),
-                gr.components.Radio([94,95], label='Whats your year of migration?')
+                gr.components.Radio([94,95], label='Whats your year of migration?'),
                 gr.components.Number(label='Whats your Weight Of Instance?')    
                        
             ]
