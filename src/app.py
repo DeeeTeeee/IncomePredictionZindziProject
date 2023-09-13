@@ -9,7 +9,7 @@ from PIL import Image
 #using joblib to load the model:
 encoder = joblib.load('encoder.joblib') # loading the encoder
 scaler = joblib.load('scaler.joblib') # loading the scaler
-model = joblib.load('ml.joblib') # loading the model
+model = joblib.load('model.joblib') # loading the model
 
 
 # Create a function that applies the ML pipeline and makes predictions
@@ -40,7 +40,7 @@ def predict(age,gender,education,marital_status,race,employment_stat,wage_per_ho
         'mig_year': [mig_year],
         'importance_of_record': [importance_of_record]
 
- })
+ }) # type: ignore
 
 # Create a list with the categorical and numerical columns
      cat_columns = [col for col in input_df.columns if input_df[col].dtype == 'object']
