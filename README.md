@@ -11,3 +11,6 @@ The objective of this challenge is to create a machine learning model to predict
 
 This solution can potentially reduce the cost and improve the accuracy of monitoring key population indicators such as income level in between census years. This information will help policymakers to better manage and avoid income inequality globally.
 
+## App[https://deeeteeee01-incomepredictionapp.hf.space]
+## PPT [https://docs.google.com/presentation/d/1DvhByIZBHWCnx5KWf3bWYhTcNuNHCTJi/edit?usp=sharing&ouid=110993119067554959178&rtpof=true&sd=true]
+
